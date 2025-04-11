@@ -123,7 +123,7 @@ class RemoteToken(db.Model, Timestamp):
     """Access token to remote application."""
 
     refresh_token = db.Column(
-        EncryptedType(type_in=db.Text, key=_secret_key), nullable=True
+        StringEncryptedType(type_in=db.Text, key=_secret_key), nullable=True
     )
     """Refresh token to remote application."""
 
